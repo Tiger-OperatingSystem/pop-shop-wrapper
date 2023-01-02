@@ -12,8 +12,8 @@ mkdir -p pacote
     rm ${file}
   done
 
-  mkdir -p usr/lib/pop-things/shop/share/themes
-  cp -vR ../Pop-dark usr/lib/pop-things/shop/share/themes
+  mkdir -p usr/lib/pop-things/shop/usr/share/themes
+  cp -vR ../Pop-dark usr/lib/pop-things/shop/usr/share/themes
   cp -vR ../libexec.so  usr/lib/pop-things/shop/
   cp -vR ../libunion.so usr/lib/pop-things/shop/
   
