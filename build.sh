@@ -9,6 +9,7 @@ mkdir -p pacote
                                                                                                                    xargs )
   for file in ./*.deb;do
     dpkg -x ${file} . 
+    rm ${file}
   done
 
   mkdir -p usr/lib/pop-things/shop/share/themes
@@ -22,7 +23,7 @@ mkdir -p pacote
   mkdir DEBIAN
   
   (
-    echo "Package: pop-shop"
+    echo "Package: pop-shop-wrapper"
     echo "Priority: required"
     echo "Version: $(date +%y.%m.%d%H%M%S)"
     echo "Architecture: amd64"
@@ -34,3 +35,4 @@ mkdir -p pacote
 )
 
 dpkg -b pacote
+mv pacote.deb pop-shop-wrapper.deb
