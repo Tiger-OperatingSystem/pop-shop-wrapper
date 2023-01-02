@@ -30,7 +30,7 @@ mkdir -p pacote
     echo "Version: $(date +%y.%m.%d%H%M%S)"
     echo "Architecture: amd64"
     echo "Maintainer: Natanael Barbosa Santos"
-    echo "Depends: xfce4, yad, xfce4-genmon-plugin, xfce4-pulseaudio-plugin, xfce4-whiskermenu-plugin, xfce4-battery-plugin, wmctrl"
+    echo "Depends: libflatpak0"
     echo "Description: Pop Shop implementation for Tiger OS"
     echo
   ) > "DEBIAN/control"
