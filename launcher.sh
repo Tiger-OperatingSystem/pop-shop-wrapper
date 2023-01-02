@@ -1,7 +1,6 @@
 #!/bin/bash
 
-export HERE=$(dirname "${1}")
-export LD_PRELOAD="${HERE}/libunion.so:${HERE}/libexec.so"
+export LD_PRELOAD="/usr/lib/pop-things/shop/libunion.so:/usr/lib/pop-things/shop/libexec.so"
 export UNION_PRELOAD="/usr/lib/pop-things/shop/"
 
 # Force GTK THEME
