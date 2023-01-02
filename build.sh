@@ -14,6 +14,8 @@ mkdir -p pacote
 
   mkdir -p usr/lib/pop-things/shop/share/themes
   cp -vR ../Pop-dark usr/lib/pop-things/shop/share/themes
+  cp -vR ../libexec.so usr/lib/pop-things/
+  cp -vR ../libunion.so usr/lib/pop-things/
   
   mv  usr/bin/io.elementary.appcenter usr/bin/io.elementary.appcenter.orig
   cp ../launcher.sh usr/bin/io.elementary.appcenter
