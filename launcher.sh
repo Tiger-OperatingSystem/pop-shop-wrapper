@@ -8,4 +8,4 @@ export UNION_PRELOAD="/usr/lib/pop-things/shop/"
 eval $(dbus-launch --auto-syntax)
 
 export GTK_THEME=Pop-dark
-io.elementary.appcenter ${@}
+io.elementary.appcenter.orig ${@}
