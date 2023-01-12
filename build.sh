@@ -3,6 +3,12 @@
 mkdir -p pacote
 (
   cd pacote
+  
+  $(wget -q -O - https://apt-origin.pop-os.org/release/dists/jammy/main/binary-amd64/Packages                       | \
+                      grep "^Filename: " | grep -E "libgranite-common_|libgranite6_|python3-repolib_|repoman_|pop-shop_" | \
+                                                             sed 's|^Filename: |https://apt-origin.pop-os.org/release/|' | \
+                                                                                                                   xargs )
+  
   wget $(wget -q -O - https://apt-origin.pop-os.org/release/dists/jammy/main/binary-amd64/Packages                       | \
                       grep "^Filename: " | grep -E "libgranite-common_|libgranite6_|python3-repolib_|repoman_|pop-shop_" | \
                                                              sed 's|^Filename: |https://apt-origin.pop-os.org/release/|' | \
