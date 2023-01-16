@@ -17,6 +17,10 @@ mkdir -p pacote
     dpkg -x ${file} . 
     rm ${file}
   done
+  
+  rm usr/bin/io.elementary.appcenter
+  wget "https://github.com/Tiger-OperatingSystem/tiger-shop/releases/download/continuous/io.elementary.appcenter" -O \
+    usr/bin/io.elementary.appcenter
 
   mkdir -p usr/lib/pop-things/shop/usr/share/themes
   cp -vR ../Pop-dark usr/lib/pop-things/shop/usr/share/themes
