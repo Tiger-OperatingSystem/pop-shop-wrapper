@@ -42,7 +42,7 @@ mkdir -p pacote
     echo "Priority: required"
     echo "Version: $(date +%y.%m.%d%H%M%S)"
     echo "Architecture: amd64"
-    echo "Maintainer: Natanael Barbosa Santos"
+    echo "Maintainer: Charles Santana, Natanael Barbosa Santos"
     echo "Depends: libflatpak0"
     echo "Description: Pop Shop implementation for Tiger OS"
     echo
