@@ -5,7 +5,9 @@ export UNION_PRELOAD="/usr/lib/pop-things/shop/"
 
 # Force GTK THEME
 
-eval $(dbus-launch --auto-syntax)
+export DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-tytL37m5bn,guid=666fd316562236143901baf563c59005
+export DBUS_SESSION_BUS_PID=36
+export DBUS_SESSION_BUS_WINDOWID=6291457
 
 export GTK_THEME=Pop-dark
 io.elementary.appcenter.orig ${@}
