@@ -7,5 +7,5 @@ export LD_PRELOAD="/usr/lib/pop-things/shop/libunion.so:/usr/lib/pop-things/shop
 
 export DBUS_SESSION_BUS_ADDRESS=$(echo ${DBUS_SESSION_BUS_ADDRESS}| sed 's|/bus|/pop_bus|g')
 
-export GTK_THEME=Pop-dark
+export GTK_THEME=Adwaita:dark
 io.elementary.appcenter.orig ${@}
