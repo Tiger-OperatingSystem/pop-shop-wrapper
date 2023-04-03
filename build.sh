@@ -30,9 +30,6 @@ mkdir -p pacote
   cp -vR ../libexec.so  usr/lib/pop-things/shop/
   cp -vR ../libunion.so usr/lib/pop-things/shop/
   
-  mv  usr/bin/io.elementary.appcenter usr/bin/io.elementary.appcenter.orig
-  cp ../launcher.sh usr/bin/io.elementary.appcenter
-  
   chmod +x usr/bin/io.elementary.appcenter
   
   sed -i 's|Name=Pop!_Shop|Name=Instalar Programas|g' usr/share/applications/io.elementary.appcenter.desktop
