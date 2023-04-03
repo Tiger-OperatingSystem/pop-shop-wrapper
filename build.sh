@@ -7,6 +7,9 @@ mkdir -p pacote
   cp ../launcher.sh usr/bin/io.elementary.appcenter.sh
   chmod +x usr/bin/io.elementary.appcenter.sh
   
+  mkdir -p usr/lib/pop-things/shop/usr/share/themes
+  cp -vR ../Pop-dark usr/lib/pop-things/shop/usr/share/themes
+  
   mkdir DEBIAN
   
   (
