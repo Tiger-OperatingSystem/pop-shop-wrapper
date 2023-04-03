@@ -32,6 +32,9 @@ mkdir -p pacote
   
   chmod +x usr/bin/io.elementary.appcenter
   
+  cp ../launcher.sh usr/bin/io.elementary.appcenter.sh
+  chmod +x usr/bin/io.elementary.appcenter.sh
+    
   sed -i 's|Name=Pop!_Shop|Name=Instalar Programas|g' usr/share/applications/io.elementary.appcenter.desktop
   
   mkdir DEBIAN
