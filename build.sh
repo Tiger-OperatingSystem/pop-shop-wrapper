@@ -4,38 +4,8 @@ mkdir -p pacote
 (
   cd pacote
   
-  $(wget -q -O - https://apt-origin.pop-os.org/release/dists/jammy/main/binary-amd64/Packages                       | \
-                      grep "^Filename: " | grep -E "libgranite-common_|libgranite6_|python3-repolib_|repoman_|pop-shop_" | \
-                                                             sed 's|^Filename: |https://apt-origin.pop-os.org/release/|' | \
-                                                                                                                   xargs )
-  
-  wget $(wget -q -O - https://apt-origin.pop-os.org/release/dists/jammy/main/binary-amd64/Packages                       | \
-                      grep "^Filename: " | grep -E "libgranite-common_|libgranite6_|python3-repolib_|repoman_|pop-shop_" | \
-                                                             sed 's|^Filename: |https://apt-origin.pop-os.org/release/|' | \
-                                                                                                                   xargs )
-  for file in ./*.deb;do
-    dpkg -x ${file} . 
-    rm ${file}
-  done
-  
-  sha256sum usr/bin/io.elementary.appcenter
-  rm usr/bin/io.elementary.appcenter
-  wget "https://github.com/Tiger-OperatingSystem/tiger-shop/releases/download/continuous/io.elementary.appcenter" -O \
-    usr/bin/io.elementary.appcenter
-  sha256sum usr/bin/io.elementary.appcenter
-  chmod +x usr/bin/io.elementary.appcenter
-  
-  mkdir -p usr/lib/pop-things/shop/usr/share/themes
-  cp -vR ../Pop-dark usr/lib/pop-things/shop/usr/share/themes
-  cp -vR ../libexec.so  usr/lib/pop-things/shop/
-  cp -vR ../libunion.so usr/lib/pop-things/shop/
-  
-  chmod +x usr/bin/io.elementary.appcenter
-  
   cp ../launcher.sh usr/bin/io.elementary.appcenter.sh
   chmod +x usr/bin/io.elementary.appcenter.sh
-    
-  sed -i 's|Name=Pop!_Shop|Name=Instalar Programas|g' usr/share/applications/io.elementary.appcenter.desktop
   
   mkdir DEBIAN
   
