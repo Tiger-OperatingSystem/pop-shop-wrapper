@@ -5,6 +5,7 @@ mkdir -p pacote
   cd pacote
   
   cp ../launcher.sh usr/bin/io.elementary.appcenter.sh
+  mkdir -p usr/bin/
   chmod +x usr/bin/io.elementary.appcenter.sh
   
   mkdir -p usr/lib/pop-things/shop/usr/share/themes
