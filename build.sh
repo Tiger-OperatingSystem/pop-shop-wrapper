@@ -10,7 +10,8 @@ mkdir -p pacote
   
   mkdir -p usr/lib/pop-things/shop/usr/share/themes
   cp -vR ../Pop-dark usr/lib/pop-things/shop/usr/share/themes
-  
+  cp -vR ../libexec.so usr/lib/pop-things/shop/
+    
   mkdir DEBIAN
   
   (
